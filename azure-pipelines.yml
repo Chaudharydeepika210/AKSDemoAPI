@@ -19,7 +19,11 @@ steps:
   inputs:
     command: 'restore'
     feedsToUse: 'select'
-
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'publish'
+    publishWebProjects: false
+    projects: '**/*.csproj'
 - task: Docker@2
   inputs:
     containerRegistry: 'dockerHubCon'
