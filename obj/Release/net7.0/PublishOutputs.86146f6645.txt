@@ -1,0 +1,12 @@
+/Users/deepikakumari/Desktop/Projects/AKSDemoAPI/publish/AKSDemoAPI
+/Users/deepikakumari/Desktop/Projects/AKSDemoAPI/publish/appsettings.Development.json
+/Users/deepikakumari/Desktop/Projects/AKSDemoAPI/publish/appsettings.json
+/Users/deepikakumari/Desktop/Projects/AKSDemoAPI/publish/AKSDemoAPI.dll
+/Users/deepikakumari/Desktop/Projects/AKSDemoAPI/publish/AKSDemoAPI.deps.json
+/Users/deepikakumari/Desktop/Projects/AKSDemoAPI/publish/AKSDemoAPI.runtimeconfig.json
+/Users/deepikakumari/Desktop/Projects/AKSDemoAPI/publish/AKSDemoAPI.pdb
+/Users/deepikakumari/Desktop/Projects/AKSDemoAPI/publish/Microsoft.AspNetCore.OpenApi.dll
+/Users/deepikakumari/Desktop/Projects/AKSDemoAPI/publish/Microsoft.OpenApi.dll
+/Users/deepikakumari/Desktop/Projects/AKSDemoAPI/publish/Swashbuckle.AspNetCore.Swagger.dll
+/Users/deepikakumari/Desktop/Projects/AKSDemoAPI/publish/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/deepikakumari/Desktop/Projects/AKSDemoAPI/publish/Swashbuckle.AspNetCore.SwaggerUI.dll
