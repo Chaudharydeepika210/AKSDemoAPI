@@ -16,21 +16,26 @@ steps:
   displayName: 'dotnet build $(buildConfiguration)'
 
 - task: DotNetCoreCLI@2
+  displayName: 'DotNet Restore'
   inputs:
     command: 'restore'
     feedsToUse: 'select'
+
 - task: DotNetCoreCLI@2
+  displayName: 'DotNet Publish'
   inputs:
     command: 'publish'
     publishWebProjects: false
     projects: '**/*.csproj'
 
 - task: Docker@2
+  displayName: 'Docker Login'
   inputs:
     containerRegistry: 'dockerHubCon'
     command: 'login'
 
 - task: Docker@2
+  displayName: 'Docker build Image'
   inputs:
     containerRegistry: 'dockerHubCon'
     repository: 'deepika210/aksdemoapi'
@@ -38,7 +43,15 @@ steps:
     Dockerfile: '**/dockerfile'
 
 - task: Docker@2
+  displayName: 'Docker push image on DockerHub'
   inputs:
     containerRegistry: 'dockerHubCon'
     repository: 'deepika210/aksdemoapi'
     command: 'push'
+
+- task: PublishBuildArtifacts@1
+  displayName: 'Publish Artifact : Drop'
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'drop'
+    publishLocation: 'Container'
