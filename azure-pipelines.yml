@@ -25,4 +25,4 @@ steps:
     containerRegistry: 'dockerHubCon'
     repository: 'AKSDEMOAPI'
     command: 'buildAndPush'
-    Dockerfile: '**/Dockerfile'
+    Dockerfile: '**/dockerfile'
