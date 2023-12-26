@@ -24,9 +24,21 @@ steps:
     command: 'publish'
     publishWebProjects: false
     projects: '**/*.csproj'
+
 - task: Docker@2
   inputs:
     containerRegistry: 'dockerHubCon'
-    repository: 'AKSDEMOAPI'
-    command: 'buildAndPush'
+    command: 'login'
+
+- task: Docker@2
+  inputs:
+    containerRegistry: 'dockerHubCon'
+    repository: 'deepika210/aksdemoapi'
+    command: 'build'
     Dockerfile: '**/dockerfile'
+
+- task: Docker@2
+  inputs:
+    containerRegistry: 'dockerHubCon'
+    repository: 'deepika210/aksdemoapi'
+    command: 'push'
